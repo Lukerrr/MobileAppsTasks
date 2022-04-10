@@ -1,0 +1,36 @@
+{
+  "name": "task2",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "expo start --dev-client",
+    "android": "expo run:android",
+    "ios": "expo run:ios",
+    "web": "expo start --web",
+    "eject": "expo eject"
+  },
+  "dependencies": {
+    "@react-navigation/native": "^6.0.10",
+    "@react-navigation/native-stack": "^6.6.1",
+    "expo": "~44.0.0",
+    "expo-av": "^10.2.1",
+    "expo-notifications": "~0.14.0",
+    "expo-status-bar": "~1.2.0",
+    "intl": "^1.2.5",
+    "moment": "^2.29.2",
+    "react": "17.0.1",
+    "react-dom": "17.0.1",
+    "react-native": "0.64.3",
+    "react-native-intl": "^1.0.0",
+    "react-native-paper": "^4.12.0",
+    "react-native-paper-dates": "^0.8.7",
+    "react-native-safe-area-context": "3.3.2",
+    "react-native-screens": "~3.10.1",
+    "react-native-web": "0.17.1",
+    "expo-file-system": "~13.1.4",
+    "expo-splash-screen": "~0.14.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.9"
+  },
+  "private": true
+}
