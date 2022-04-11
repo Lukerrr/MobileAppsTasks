@@ -48,7 +48,6 @@ export default class App extends React.Component {
 
     _hideAlarmNotify() {
         RadioPlayer.instance.stop();
-
         this.state.bIsAlarmNotifyVisible = false;
         this.setState(this.state);
     }
@@ -63,7 +62,7 @@ export default class App extends React.Component {
                         <Stack.Screen name="Creation" component={withTheme(CreationScreen)} />
                     </Stack.Navigator>
                 </NavigationContainer>
-                <Modal visible={this.state.bIsAlarmNotifyVisible}>
+                <Modal visible={this.state.bIsAlarmNotifyVisible} dismissable={false} >
                     <AlarmNotify theme={appTheme} radioName={this.state.currentRadioName} onHide={this._hideAlarmNotify.bind(this)} />
                 </Modal>
             </PaperProvider>
