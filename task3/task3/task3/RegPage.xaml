@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             Title="Sign Up"
+             x:Class="task3.RegPage">
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="CenterAndExpand">
+            <Label Text="OpenChat" FontSize="32" HorizontalOptions="Center" />
+            <Entry x:Name="usernameEntry" Placeholder = "Username" Margin="25,25,25,0" />
+            <Entry x:Name="passwordEntry" Placeholder = "Password" IsPassword ="True" Margin="25,0,25,0" />
+            <Entry x:Name="passwordCheckEntry" Placeholder = "Confirm Password" IsPassword ="True" Margin="25,0,25,15" />
+            <Button Text = "Confirm" FontSize="18" Margin="25" HorizontalOptions="Center" Clicked="OnButtonConfirmClicked"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             Title="Sign In"
+             x:Class="task3.LoginPage">
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="CenterAndExpand">
+            <Label Text="OpenChat" FontSize="32" HorizontalOptions="Center" />
+            <Entry x:Name="usernameEntry" Placeholder = "Username" Margin="25,25,25,0" />
+            <Entry x:Name="passwordEntry" Placeholder = "Password" IsPassword ="True" Margin="25,0,25,15" />
+            <Grid Margin="25">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Button Text = "Login" FontSize="18" Grid.Column="0" HorizontalOptions="Center" Clicked="OnButtonLoginClicked"/>
+                <Button Text = "Sign Up" FontSize="18" Grid.Column="1" HorizontalOptions="Center" Clicked="OnButtonSignUpClicked"/>
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

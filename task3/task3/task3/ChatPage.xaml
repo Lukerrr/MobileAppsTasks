@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             Title="Chat"
+             x:Class="task3.ChatPage">
+
+    <StackLayout>
+        <Grid VerticalOptions="FillAndExpand">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="50" />
+            </Grid.RowDefinitions>
+            <ListView
+                Grid.Row="0"
+                Margin="10"
+                HorizontalOptions="Fill"
+                VerticalOptions="FillAndExpand"
+                HasUnevenRows="True"
+                x:Name="MessagesList"
+                SelectionMode="None"
+                FlowDirection="RightToLeft"
+                Rotation="180"
+            >
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Label FlowDirection="LeftToRight" Rotation="180">
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <FormattedString.Spans>
+                                            <Span TextColor="{Binding Color}" FontAttributes="Bold" Text="{Binding UserName}"/>
+                                            <Span TextColor="Black" FontAttributes="Bold" Text=": "/>
+                                            <Span TextColor="Black" Text="{Binding MessageText}"/>
+                                        </FormattedString.Spans>
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </Label>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <Grid Grid.Row="1" Margin="10,0,10,10">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="75" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Editor Grid.Column="0" HorizontalOptions="Fill" x:Name="messageEditor" Placeholder = "Write a message" />
+                <Button Grid.Column="1" HorizontalOptions="Fill" Text="Send" FontSize="14" Clicked="OnButtonSendClicked"/>
+            </Grid>
+        </Grid>
+    </StackLayout>
+
+</ContentPage>
