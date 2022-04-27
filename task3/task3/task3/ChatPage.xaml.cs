@@ -34,8 +34,7 @@ namespace task3
 
         private async void RequestSend(string message)
         {
-            ServerStatus result = await ChatClient.Instance.SendMessage(messageEditor.Text);
-            messageEditor.Text = string.Empty;
+            ServerStatus result = await ChatClient.Instance.SendMessage(message);
 
             switch (result)
             {
@@ -70,6 +69,7 @@ namespace task3
             }
 
             RequestSend(messageEditor.Text);
+            messageEditor.Text = string.Empty;
         }
 
         private Random random = new Random();

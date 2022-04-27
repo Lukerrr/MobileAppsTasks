@@ -118,7 +118,7 @@ namespace task3
                     {
                         Sid = new SimpleChatApp.GrpcService.Guid() { Guid_ = sessionId },
                         StartTime = Timestamp.FromDateTime(DateTime.MinValue.ToUniversalTime()),
-                        EndTime = Timestamp.FromDateTime(DateTime.MaxValue.ToUniversalTime())
+                        EndTime = Timestamp.FromDateTime(DateTime.Today.AddDays(1).ToUniversalTime())
                     });
 
                 foreach (SimpleChatApp.GrpcService.MessageData message in logsResult.Logs)
