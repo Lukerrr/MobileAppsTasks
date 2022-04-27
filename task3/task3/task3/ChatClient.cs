@@ -191,7 +191,7 @@ namespace task3
         private ChatServiceClient chatService;
         private string sessionId = "";
 
-        private static readonly string ip = "192.168.0.105";
+        private static readonly string ip = "109.110.63.211";
         private static readonly string port = "30051";
         private static readonly ChatClient instance = new ChatClient();
     }
