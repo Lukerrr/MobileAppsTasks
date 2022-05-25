@@ -11,6 +11,8 @@ public class PlayerController : MonoBehaviour
     public float cameraPitchMin = -10f;
     public float cameraPitchMax = 60f;
 
+    public float cameraOffsetY = 0.5f;
+
     public GameObject cameraRoot;
     public TankActor tank;
 
@@ -47,7 +49,7 @@ public class PlayerController : MonoBehaviour
         tank.Move(GetMovementInput());
         tank.Rotate(GetRotationInput());
 
-        cameraRoot.transform.position = tank.transform.position;
+        cameraRoot.transform.position = tank.transform.position + tank.transform.up * cameraOffsetY;
 
         if (tank.IsDead())
         {
