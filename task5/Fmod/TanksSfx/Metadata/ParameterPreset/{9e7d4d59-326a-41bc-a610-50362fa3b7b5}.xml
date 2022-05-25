@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="ParameterPreset" id="{9e7d4d59-326a-41bc-a610-50362fa3b7b5}">
+		<property name="name">
+			<value>TowerMoving</value>
+		</property>
+		<relationship name="folder">
+			<destination>{41efe02b-98fc-45f4-a0e9-2793bbbb1741}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{4e37b10c-e1cf-480e-9246-52ff6c9b7326}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{4e37b10c-e1cf-480e-9246-52ff6c9b7326}">
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>
